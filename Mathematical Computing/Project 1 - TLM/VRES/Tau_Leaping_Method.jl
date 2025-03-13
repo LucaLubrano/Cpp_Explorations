@@ -32,7 +32,7 @@ function Tau_Leaping_Method(x0, k::Vector{Float64}, ν::Array{Int}, τ::Float64,
     reaction_events = Array{Float64}(zeros(length_a))
     if paths
         X = Array{Float64,3}(zeros(species_count, n, R))
-        X[:,1,:] = length(x0) == 4 ? x0*ones(1,R) : x0
+        X[:,1,:] = length(x0) == 2 ? x0*ones(1,R) : x0
         for i in 1:R
             for j in 1:n-1
                 λ_set = Vector{Float64}(a(X[:,j,i],k).*τ)
