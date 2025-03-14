@@ -39,6 +39,13 @@ float probability_pois(int k, float lambda){
 	return p 
 }		
 
+float cumulative_pois(int n, float lambda){
+	static cdf_n = 0;
+	for (int i = 0 ; i <= n ; i++){
+		cdf_n += probability_pois(n, lambda);
+	}
+	return cdf_n;
+}
 
 // todo: make this function not suck
 float quantile_pois(float p, float lambda){
@@ -51,13 +58,6 @@ float quantile_pois(float p, float lambda){
 	return k;
 }
 
-float cumulative_pois(int n, float lambda){
-	static cdf_n = 0;
-	for (int i = 0 ; i <= n ; i++){
-		cdf_n += probability_pois(n, lambda);
-	}
-	return cdf_n;
-}
 
 /*
 That's just converting the formula given on the Wikipedia page.
@@ -78,7 +78,6 @@ p(lambda) = frac{lambda^k * e^-lambda}{factorial(k)}
 /////////////////////////////////////////////////////////////////////
 
 /*
-
 // poisson random number generator
 
 #include <iomanip>
@@ -164,7 +163,5 @@ Sum (k=0, n) e^(-lambda) frac{lambda^k}{factorial(k)}
 
 p(lambda) = frac{lambda^k * e^-lambda}{factorial(k)}
 */
-
-
 
 */
