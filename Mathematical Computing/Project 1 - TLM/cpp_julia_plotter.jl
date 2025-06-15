@@ -12,7 +12,7 @@ using BenchmarkTools
 k, x0, ν, a = reaction_network_init("MMC")
 τ = 1.0
 # Data1, time = @btime Tau_Leaping_Method(x0, k, ν, τ, a, 10000, 0.0, 100.0)
-@btime Tau_Leaping_Method(x0, k, ν, τ, a, 10000, 0.0, 100.0)
+@time Tau_Leaping_Method(x0, k, ν, τ, a, 10000, 0.0, 100.0)
 # w = 7.143*0.394*8 # with inches
 # h = 5.001*0.394*6 # height inches
 # h = figure(figsize=(w/2,(h-0.7)/2))

@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/luca/Documents/Github/Cpp_Explorations/Mathematical Computing/Project 1 - TLM",
+      "program": "/Users/luca/Documents/Github/Cpp_Explorations/Mathematical Computing/Project 1 - TLM/build/Debug/outDebug"
+    }
+  ]
+}
